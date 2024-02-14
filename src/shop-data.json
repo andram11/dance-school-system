@@ -1,0 +1,90 @@
+[
+    {
+      "id": 1,
+      "name": "Pole dance beginner level 1",
+      "imageUrl": "https://i.ibb.co/ZYW3VTp/brown-brim.png",
+      "price": 20,
+      "location": "Nivelles",
+      "timeslot": "17:00-18:00",
+      "dayOfTheWeek": "Monday"
+    },
+    {
+      "id": 2,
+      "name": "Pole dance beginner level 2",
+      "imageUrl": "https://i.ibb.co/ypkgK0X/blue-beanie.png",
+      "price": 20,
+      "location": "Nivelles",
+      "timeslot": "18:00-19:00",
+      "dayOfTheWeek": "Monday"
+
+    },
+    {
+      "id": 3,
+      "name": "Pole dance intermediate level 1",
+      "imageUrl": "https://i.ibb.co/QdJwgmp/brown-cowboy.png",
+      "price": 25,
+      "location": "Wavre",
+      "timeslot": "18:00-19:15",
+      "dayOfTheWeek": "Tuesday"
+    },
+    {
+      "id": 4,
+      "name": "Pole dance intermediate level 2",
+      "imageUrl": "https://i.ibb.co/RjBLWxB/grey-brim.png",
+      "price": 25,
+      "location": "Wavre",
+      "timeslot": "19:30-20:45",
+      "dayOfTheWeek": "Tuesday"
+
+    },
+    {
+      "id": 5,
+      "name": "Pole dance intermediate level 3",
+      "imageUrl": "https://i.ibb.co/YTjW3vF/green-beanie.png",
+      "price": 25,
+      "location": "Wavre",
+      "timeslot": "19:00-20:15",
+      "dayOfTheWeek": "Wednesday"
+
+    },
+    {
+      "id": 6,
+      "name": "Pole dance advanced level 1",
+      "imageUrl": "https://i.ibb.co/rKBDvJX/palm-tree-cap.png",
+      "price": 25,
+      "location": "Brussels",
+      "timeslot": "19:00-20:15",
+      "dayOfTheWeek": "Thursday"
+
+    },
+    {
+      "id": 7,
+      "name": "Pole dance advanced level 2",
+      "imageUrl": "https://i.ibb.co/bLB646Z/red-beanie.png",
+      "price": 25, 
+      "location": "Brussels",
+      "timeslot": "20:30-21:45",
+      "dayOfTheWeek": "Thursday"
+
+    },
+    {
+      "id": 8,
+      "name": "Aerial Hoop All levels",
+      "imageUrl": "https://i.ibb.co/1f2nWMM/wolf-cap.png",
+      "price": 20,
+      "location": "Brussels",
+      "timeslot": "20:00-21:00",
+      "dayOfTheWeek": "Friday"
+
+    },
+    {
+      "id": 9,
+      "name": "Ashtanga Yoga Beginners",
+      "imageUrl": "https://i.ibb.co/X2VJP2W/blue-snapback.png",
+      "price": 20,
+      "location": "Wavre",
+      "timeslot": "10:00-11:00",
+      "dayOfTheWeek": "Saturday"
+    }
+  ]
+  
