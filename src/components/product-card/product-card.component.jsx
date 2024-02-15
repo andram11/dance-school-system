@@ -5,7 +5,7 @@ import { useContext } from 'react';
 import { CartContext } from '../../contexts/cart.context';
 
 const ProductCard = ({product})=> {
-    const {name, imageUrl, location, timeslot, dayOfTheWeek, price }= product
+    const {name, imageUrl, location,price }= product
     const {addItemToCart}= useContext(CartContext)
     return(
     <div className='product-card-container'>
@@ -13,9 +13,8 @@ const ProductCard = ({product})=> {
         <div className='footer'>
             <span className='name'>{name}</span>
             <span className='location'>{location}</span>
-            <span className='timeslot'>{timeslot}</span>
-            <span className='day-of-week'>{dayOfTheWeek}</span>
-            <span className='price'>{price}</span>
+         
+            <span className='price'>EUR{price}</span>
         </div>
         <Button buttonType='inverted' onClick= {()=> addItemToCart(product)}>Add to cart</Button>
     </div>
