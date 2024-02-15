@@ -8,20 +8,32 @@ import {
   signInWithEmailAndPassword,
   signOut,
   onAuthStateChanged,
+  
 } from 'firebase/auth';
-import { getFirestore, doc, getDoc, setDoc } from 'firebase/firestore';
+import { getFirestore, doc, getDoc, setDoc, collection, writeBatch, query, getDocs } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  apiKey: "AIzaSyCBzHYWvv_eADInqNYgv8Vf890WucgMTbk",
+  authDomain: "dance-school-royal-crown.firebaseapp.com",
+  projectId: "dance-school-royal-crown",
+  storageBucket: "dance-school-royal-crown.appspot.com",
+  messagingSenderId: "538211949076",
+  appId: "1:538211949076:web:d3830809a8809d2500a501"
 };
+
+// const firebaseConfig = {
+//   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+//   authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+//   projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+//   storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+//   messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+//   appId: process.env.REACT_APP_FIREBASE_APP_ID,
+// };
 
 const firebaseApp = initializeApp(firebaseConfig);
 
+
+//Authentication
 const googleProvider = new GoogleAuthProvider();
 
 googleProvider.setCustomParameters({
@@ -34,7 +46,39 @@ export const signInWithGooglePopup = () =>
 export const signInWithGoogleRedirect = () =>
   signInWithRedirect(auth, googleProvider);
 
+
+  //Database
 export const db = getFirestore();
+// Bulk import data in DB
+export const addCollectionAndDocuments = async (
+  collectionKey,
+  objectsToAdd
+) => {
+  const batch = writeBatch(db);
+  const collectionRef = collection(db, collectionKey);
+  
+  objectsToAdd.forEach((object) => {
+     const docRef = doc(collectionRef, object.title.toLowerCase());
+     batch.set(docRef, object);
+  });
+
+  await batch.commit();
+  console.log('done');
+};
+
+
+export const getCategoriesAndDocuments = async ()=> {
+  const collectionRef= collection(db, 'categories')
+  const q= query(collectionRef)
+  const querySnapshot= await getDocs(q)
+  const categoryMap= querySnapshot.docs.reduce((acc, docSnapshot)=> {
+    const {title, items}= docSnapshot.data()
+    acc[title.toLowerCase()]= items
+    return acc
+  }, {})
+
+  return categoryMap
+}
 
 export const createUserDocumentFromAuth = async (
   userAuth,
@@ -81,3 +125,4 @@ export const signOutUser = async () => await signOut(auth);
 
 export const onAuthStateChangedListener = (callback) =>
   onAuthStateChanged(auth, callback);
+
