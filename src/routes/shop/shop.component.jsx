@@ -1,7 +1,8 @@
-
-import '../shop/shop.styles.scss'
+//React Imports
 import {Routes, Route} from 'react-router-dom'
 
+
+//Components imports
 import CategoriesPreview from '../categories-preview/categories-preview.component'
 import Category from '../category/category.component'
 
