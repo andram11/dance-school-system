@@ -1,5 +1,7 @@
-.product-card-container { 
-    width: 100%; 
+import styled from "styled-components";
+
+export const ProductCardContainer = styled.div`
+     width: 100%; 
     display: flex; 
     flex-direction: column; 
     height: 350px; 
@@ -25,22 +27,26 @@
         
         button { 
             opacity: 0.85; 
-            display: flex; } } 
-            
-        .footer {
-             width: 100%; 
-             height: 5%; 
-             display: flex; 
-             justify-content: space-between; 
-             font-size: 18px; 
-             
-        .name{ width: 90%; 
-        margin-bottom: 20px; } 
-        
-        .day-of-week, .location, .timeslot {
-            width: 50%;
-        }
+            display: flex; } 
+            } 
+`
 
-        .price  { width: 10%; } 
-    
-    } }
+export const Footer= styled.div`
+    width: 100%; 
+    height: 5%; 
+    display: flex; 
+    justify-content: space-between; 
+    font-size: 18px; 
+`
+export const Name=styled.span`
+    width: 90%; 
+    margin-bottom: 20px;
+`
+export const Location= styled.span`
+    width: 50%;
+`       
+
+export const Price= styled.span`
+    width: 10%;
+`
+     
