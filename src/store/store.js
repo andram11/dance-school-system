@@ -13,7 +13,7 @@ const middleWares= [logger]
 
 export const store= configureStore({
     reducer: rootReducer,
-    middleware: (getDefaultMiddleware)=> getDefaultMiddleware({
-    }).concat(middleWares)
+    // middleware: (getDefaultMiddleware)=> getDefaultMiddleware({
+    // }).concat(middleWares)
     //middleware: middleWares - When you pass your own middleware, it overrides the default Redux middleware
 })
