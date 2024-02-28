@@ -1,0 +1,19 @@
+{
+	"geolocation": {
+		"data": {
+			"city": "Uccle",
+			"country": {
+				"code": "BE",
+				"name": "Belgium"
+			},
+			"subdivision": {
+				"code": "BRU",
+				"name": "Brussels Capital"
+			},
+			"timezone": "Europe/Brussels",
+			"latitude": 50.8028,
+			"longitude": 4.3423
+		},
+		"timestamp": 1709117995422
+	}
+}
