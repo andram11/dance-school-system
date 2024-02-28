@@ -8,7 +8,7 @@ import {useDispatch } from 'react-redux';
 import {
   onAuthStateChangedListener,
   createUserDocumentFromAuth,
-} from '../src/utils/firebase/firebase.utils';
+} from './utils/firebase/firebase.utils';
 
 
 //Reducer imports

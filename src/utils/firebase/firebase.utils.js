@@ -14,24 +14,15 @@ import { getFirestore, doc, getDoc, setDoc, collection, writeBatch, query, getDo
 
 
 
-// const firebaseConfig = {
-//   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-//   authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-//   projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-//   storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-//   messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
-//   appId: process.env.REACT_APP_FIREBASE_APP_ID,
-// };
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCBzHYWvv_eADInqNYgv8Vf890WucgMTbk",
-  authDomain: "dance-school-royal-crown.firebaseapp.com",
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
   projectId: "dance-school-royal-crown",
-  storageBucket: "dance-school-royal-crown.appspot.com",
-  messagingSenderId: "538211949076",
-  appId: "1:538211949076:web:d3830809a8809d2500a501"
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
 };
-
 
 
 const firebaseApp = initializeApp(firebaseConfig);
